@@ -1,0 +1,9 @@
+{% if notebooks %}
+    <ul>
+    {% for book in notebooks %}
+        <li><a href="{%url 'notebook' book.id %}"/>{{ book.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No notebooks yet.</p>
+{% endif %}
